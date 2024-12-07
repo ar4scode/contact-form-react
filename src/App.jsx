@@ -44,7 +44,7 @@ function App() {
               {...formik.getFieldProps("firstName")}
             />
             {formik.touched.firstName && formik.errors.firstName ? (
-                <div>{formik.errors.firstName}</div>
+                <div className="error-message">{formik.errors.firstName}</div>
               ) : null}
 
           </div>
@@ -57,7 +57,7 @@ function App() {
               {...formik.getFieldProps("lastName")}
             />
             {formik.touched.lastName && formik.errors.lastName ? (
-                <div>{formik.errors.lastName}</div>
+                <div className="error-message">{formik.errors.lastName}</div>
               ) : null}
 
           </div>
@@ -71,19 +71,35 @@ function App() {
             {...formik.getFieldProps("email")}
           />
           {formik.touched.email && formik.errors.email ? (
-                <div>{formik.errors.email}</div>
+                <div className="error-message">{formik.errors.email}</div>
               ) : null}
 
         </div>
         <div className="query-type-container">
           <label htmlFor="queryType">Query Type</label>
           <div className="queries">
-            <input type="radio" name="queryType" id="" value="general" {...formik.getFieldProps("queryType")} /> General Enquiry
-            <input type="radio" name="queryType" id="" value="support" {...formik.getFieldProps("queryType")} /> Support Request
+            <div>
+            <input
+              type="radio"
+              name="queryType"
+              value="general"
+              checked={formik.values.queryType === "general"}
+              onChange={formik.handleChange}
+            /> General Enquiry
+            </div>
+            <div>
+            <input
+              type="radio"
+              name="queryType"
+              value="support"
+              checked={formik.values.queryType === "support"}
+              onChange={formik.handleChange}
+           /> Support Request
+            </div>
           </div>
         </div>
         {formik.touched.queryType && formik.errors.queryType ? (
-          <div>{formik.errors.queryType}</div>
+          <div className="error-message">{formik.errors.queryType}</div>
         ) : null}
 
         <div className="feedback-container">
@@ -91,7 +107,7 @@ function App() {
           <textarea name="feedback" id="feedback" {...formik.getFieldProps("feedback")} />
         </div>
         {formik.touched.feedback && formik.errors.feedback ? (
-          <div>{formik.errors.feedback}</div>
+          <div className="error-message">{formik.errors.feedback}</div>
         ) : null}
 
         <div className="checkbox-container">
@@ -104,7 +120,7 @@ function App() {
           /> I consent to being contacted by the team
         </div>
         {formik.touched.terms && formik.errors.terms ? (
-          <div>{formik.errors.terms}</div>
+          <div className="error-message">{formik.errors.terms}</div>
         ) : null}
 
         <button type='submit'>Submit</button>

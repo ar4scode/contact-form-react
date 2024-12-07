@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #caedf1;
+}
+
+/* Overall container using Grid */
+.container {
+  display: grid;
+  gap: 20px; /* Space between elements */
+  max-width: 600px;
+  margin: 5rem auto;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 0 20px 1px rgba(139, 138, 138, .6);
+}
+
+/* Flexbox for two-column layout */
+.user-info-container {
+  display: flex;
+  gap: 10px; /* Space between first name and last name */
+  margin-bottom: 1rem;
+}
+
+.first-name-container,
+.last-name-container {
+  flex: 1; /* Equal width for both fields */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label and input styles */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #888a89;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  transition: all .3s;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  transition: all .3s;
+}
+
+input:hover,
+textarea:hover {
+  transform: translateY(3px);
+}
+
+input:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none; /* Prevent resizing */
+  min-height: 7rem;
+}
+
+button {
+  background-color: #109626;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  transition: all .3s;
+}
+
+button:hover {
+  opacity: .9;
+}
+
+.query-type-container {
+  margin-top: 1rem;
+}
+
+/* Query type as a row using Flexbox */
+.queries {
+  display: flex;
+  gap: 50px; /* Space between radio buttons */
+  margin: 1rem 0;
+  justify-self: center;
+}
+
+.queries div {
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+}
+
+.queries div input {
+  margin: 0 .5rem;
+}
+
+/* Checkbox container */
+/* Checkbox container */
+.checkbox-container {
+  display: flex;
+  align-items: center; /* Align checkbox and text vertically */
+  gap: 5px; /* Control spacing between checkbox and text */
+  font-size: 1rem; /* Adjust text size if needed */
+  color: #555; /* Optional: Text color */
+}
+
+input[type="checkbox"] {
+  margin: 0; /* Remove default margin */
+  width: auto; /* Ensure checkbox sizing is appropriate */
+  height: auto; /* Reset to default height */
+}
+
+
+.error-message {
+  text-align: center;
+  margin: .5rem 0;
+  color: #dd6060;
+}
