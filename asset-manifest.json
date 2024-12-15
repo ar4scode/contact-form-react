@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ar4scode/contact-form-react/static/css/main.2b093a58.css",
+    "main.js": "/ar4scode/contact-form-react/static/js/main.653ad63a.js",
+    "index.html": "/ar4scode/contact-form-react/index.html",
+    "main.2b093a58.css.map": "/ar4scode/contact-form-react/static/css/main.2b093a58.css.map",
+    "main.653ad63a.js.map": "/ar4scode/contact-form-react/static/js/main.653ad63a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b093a58.css",
+    "static/js/main.653ad63a.js"
+  ]
+}
